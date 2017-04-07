@@ -3,7 +3,7 @@
 /* File description: file dedicated to implement the functioning of  */
 /*                   the 7 segments device                           */
 /* Author name:      Daniel Kaneda                                   */
-/* Creation date:    30março2017                                     */
+/* Creation date:    30marÃ§o2017                                     */
 /* Revision date:                                                    */
 /* ***************************************************************** */
 
@@ -115,19 +115,4 @@ void which_7seg_dev( int position ) {
 void clear_7seg_dev(  ) {
 
 	GPIOC_PCOR |= GPIO_PCOR_PTCO( 0xFFFFu );
-    //GPIOC_PCOR = GPIO_PCOR_PTCO( 0x0000u );
-	/*switch( position ) {
-	        case 0:
-	            GPIOC_PCOR |= GPIO_PCOR_PTCO( 0x2000u );
-	            break;
-	        case 1:
-	            GPIOC_PCOR |= GPIO_PCOR_PTCO( 0x1000u );
-	            break;
-	        case 2:
-	            GPIOC_PCOR |= GPIO_PCOR_PTCO( 0x800u );
-	            break;
-	        case 3:
-	            GPIOC_PCOR |= GPIO_PCOR_PTCO( 0x400u );
-	            break;
-	    }*/
 }
