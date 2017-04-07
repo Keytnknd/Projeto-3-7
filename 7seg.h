@@ -28,8 +28,8 @@ void init_7seg_dev( void );
 void set_7seg_dev( int char_to_show);
 
 /* ************************************************ */
-/* Method name:        ledswi_clearLed              */
-/* Method description: set the led OFF              */
+/* Method name:        which_7seg_dev               */
+/* Method description: choose a display             */
 /* Input params:       cLedNum    = which LED {1..4}*/
 /* Outpu params:       n/a                          */
 /* ************************************************ */
