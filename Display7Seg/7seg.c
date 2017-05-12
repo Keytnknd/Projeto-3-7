@@ -1,31 +1,17 @@
 /* ***************************************************************** */
-/* File name:        7seg.c                                          */
+/* File name:        7segments.c                                     */
 /* File description: file dedicated to implement the functioning of  */
 /*                   the 7 segments device                           */
 /* Author name:      Daniel Kaneda                                   */
-/* Creation date:    30março2017                                     */
-/* Revision date:                                                    */
+/* Creation date:    30/03/2017                                      */
+/* Revision date:    12/05/2017                                      */
 /* ***************************************************************** */
 
-#include "es670_peripheral_board.h"
+#include "KL25Z/es670_peripheral_board.h"
 #include "util.h"
 
+///#define 7SEG_ALT					;
 
-/* ****************************************************/
-/* Method name:        init_7seg_dev                  */
-/* Method description: function to initiate the       */
-/*                     clock of the 7 segments device */
-/*                     and to configure the mux field */
-/*                     of the PCR register for the    */
-/*                     correct alternative, gerenec   */
-/*                     pin input output               */
-/*                                                    */          
-/* Input params:      n/a                             */
-/*                                                    */
-/*                                                    */
-/*                                                    */
-/* Outpu params:      n/a                            */
-/* ****************************************************/
 void init_7seg_dev( void ) {
 
     SIM_SCGC5 |= SIM_SCGC5_PORTC( CGC_CLOCK_ENABLED ); //RELEASE PORT C CLOCK
@@ -46,6 +32,7 @@ void init_7seg_dev( void ) {
     GPIOC_PDDR |= GPIO_PDDR_PDD( 0x3CFFu );
 
 }
+
 
 /* ************************************************ */
 /* Method name:        set_7seg_dev                 */
@@ -84,9 +71,10 @@ void set_7seg_dev( int char_to_show) {
 
 /* ************************************************ */
 /* Method name:        which_7seg_dev               */
-/* Method description: choose the 7 seg display     */
-/* Input params:       position = which display     */
-/* Outpu params:       n/a                          */
+/* Method description: select which of the 4        */
+/*		       displays on the board to use */
+/* Input params:       position = which 7segment    */
+/*		       display                      */
 /* ************************************************ */
 void which_7seg_dev( int position ) {
     switch( position ) {
