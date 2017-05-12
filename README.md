@@ -1,2 +1,3 @@
-# Projeto-1-7
-Functioning of Leds, Button and 7 Segments Display
+# Projeto-3-7
+Implementation of Leds, Button and 7 Segments Display
+Implementation of LCD display
