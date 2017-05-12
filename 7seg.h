@@ -2,7 +2,7 @@
  * 7seg.h
  *
  *  Created on: 31/03/2017
- *      Author: aluno
+ *      Author: Daniel Kaneda
  */
 
 #ifndef SOURCES_7SEG_H_
@@ -30,7 +30,8 @@ void set_7seg_dev( int char_to_show);
 /* ************************************************ */
 /* Method name:        which_7seg_dev               */
 /* Method description: choose a display             */
-/* Input params:       cLedNum    = which LED {1..4}*/
+/* Input params:       position = which 7seg display*/
+/*                     to show                      */
 /* Outpu params:       n/a                          */
 /* ************************************************ */
 void which_7seg_dev( int position );
