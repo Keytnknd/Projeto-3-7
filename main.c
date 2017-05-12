@@ -29,61 +29,24 @@
  */
 
 #include "fsl_device_registers.h"
-#include "es670_peripheral_board.h"
+#include "KL25Z/es670_peripheral_board.h"
 #include "buzzer_hal.h"
 #include "ledswi_hal.h"
 #include "mcg_hal.h"
 #include "util.h"
 #include "7seg.h"
+#include "debugUart.h"
+#include "fsl_debug_console.h"
 
 static int i = 0;
-
 int main(void) {
 
-	/* Write your code here */
-	switch_status_type_e sts;
-
-	/* This for loop should be replaced. By default this loop allows a single stepping. */
+	lcd_initLcd();
+	lcd_dummyText();
 	for (;;) {
-		ledswi_initLedSwitch(1,3);
-		sts = ledswi_getSwitchStatus(3);
-		if (sts == SWITCH_ON) {
-		    ledswi_setLed(4);
-		}
-		else {
-			ledswi_clearLed(4);
-		}
-
-
-		mcg_clockInit();
-		init_7seg_dev();
-
-		set_7seg_dev(0);
-		which_7seg_dev(0);
-		util_genDelay1ms();
-		clear_7seg_dev();
-
-
-		set_7seg_dev(2);
-		which_7seg_dev(1);
-		util_genDelay1ms();
-		clear_7seg_dev();
-
-		set_7seg_dev(4);
-		which_7seg_dev(2);
-		util_genDelay1ms();
-		clear_7seg_dev();
-
-		set_7seg_dev(3);
-		which_7seg_dev(3);
-		util_genDelay1ms();
-		clear_7seg_dev();
 
 		i++;
 	}
 	/* Never leave main */
 	return 0;
 }
-////////////////////////////////////////////////////////////////////////////////
-// EOF
-////////////////////////////////////////////////////////////////////////////////
