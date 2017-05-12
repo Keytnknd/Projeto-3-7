@@ -2,7 +2,7 @@
  * buzzer_hal.c
  *
  *  Created on: 31/03/2017
- *      Author: aluno
+ *      Author: Daniel Kaneda
  */
 
 /* ***************************************************************** */
