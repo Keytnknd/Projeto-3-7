@@ -5,14 +5,12 @@
 /*                   controller                                      */
 /* Author name:      dloubach                                        */
 /* Creation date:    16out2015                                       */
-/* Revision date:    25fev2016                                       */
+/* Revision date:    05maio2017                                      */
 /* ***************************************************************** */
 
-#include "lcd_hal.h"
+#include "lcd.h"
 #include "KL25Z/es670_peripheral_board.h"
 #include "util.h"
-
-/* system includes */
 
 
 /* line and columns */
